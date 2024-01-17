@@ -1,0 +1,12 @@
+C:\Users\Utilisateur\source\repos\Custom_Innstaller\bin\Debug\Custom_Innstaller.exe.config
+C:\Users\Utilisateur\source\repos\Custom_Innstaller\bin\Debug\Custom_Innstaller.exe
+C:\Users\Utilisateur\source\repos\Custom_Innstaller\bin\Debug\Custom_Innstaller.pdb
+C:\Users\Utilisateur\source\repos\Custom_Innstaller\obj\Debug\Custom_Innstaller.csproj.AssemblyReference.cache
+C:\Users\Utilisateur\source\repos\Custom_Innstaller\obj\Debug\Custom_Innstaller.Custom_Repo.resources
+C:\Users\Utilisateur\source\repos\Custom_Innstaller\obj\Debug\Custom_Innstaller.Download.resources
+C:\Users\Utilisateur\source\repos\Custom_Innstaller\obj\Debug\Custom_Innstaller.Properties.Resources.resources
+C:\Users\Utilisateur\source\repos\Custom_Innstaller\obj\Debug\Custom_Innstaller.Setup.resources
+C:\Users\Utilisateur\source\repos\Custom_Innstaller\obj\Debug\Custom_Innstaller.csproj.GenerateResource.cache
+C:\Users\Utilisateur\source\repos\Custom_Innstaller\obj\Debug\Custom_Innstaller.csproj.CoreCompileInputs.cache
+C:\Users\Utilisateur\source\repos\Custom_Innstaller\obj\Debug\Custom_Innstaller.exe
+C:\Users\Utilisateur\source\repos\Custom_Innstaller\obj\Debug\Custom_Innstaller.pdb
