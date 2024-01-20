@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Custom_Innstaller
+namespace Custom_Installer
 {
     internal static class Program
     {

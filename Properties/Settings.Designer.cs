@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Custom_Innstaller.Properties
+namespace Custom_Installer.Properties
 {
 
 
