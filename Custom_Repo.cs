@@ -2,22 +2,13 @@
 using System.IO;
 using System.IO.Compression;
 using System.Net;
-using System.Threading;
 using System.Windows.Forms;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Custom_Innstaller
 {
     public partial class Custom_Repo : Form
     {
         private const string UrlDuTelechargement = "https://archive.legoshii.fr/money-app/download/MoneyApp-Setup.zip"; // Remplacez par l'URL réel du téléchargement
-        private const string CheminDossierTelechargement = @"C:\Users\Utilisateur\AppData\Roaming\Custom_Installer"; // Remplacez par le chemin où vous souhaitez télécharger et extraire l'archive
         public Custom_Repo()
         {
             InitializeComponent();
@@ -30,23 +21,13 @@ namespace Custom_Innstaller
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string nomArchive = "MoneyApp-Setup"; // Remplacez par le nom réel de votre archive
-            string destination = Path.Combine(CheminDossierTelechargement, $"{nomArchive}.zip");
+            string nomArchive = "MoneyApp-Setup"; // Remplace ce nom par celui de ton archive que tu veux télécharger
+            string destination = Path.Combine(textBox1.Text.Trim(), $"{nomArchive}.zip");
             string emplacementTelechargement = textBox1.Text.Trim();
 
             if (string.IsNullOrEmpty(emplacementTelechargement))
             {
-                MessageBox.Show("Veuillez entrer un emplacement de téléchargement valide.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (!Directory.Exists(emplacementTelechargement))
-            {
-                Directory.CreateDirectory(emplacementTelechargement);
-            }
-            if (string.IsNullOrEmpty(emplacementTelechargement))
-            {
-                MessageBox.Show("Veuillez entrer un emplacement de téléchargement valide.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Entre un emplacement de téléchargement valide.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -55,7 +36,6 @@ namespace Custom_Innstaller
                 Directory.CreateDirectory(emplacementTelechargement);
             }
 
-            // Téléchargement du fichier
             using (WebClient client = new WebClient())
             {
                 client.DownloadProgressChanged += (s, args) =>
@@ -65,16 +45,26 @@ namespace Custom_Innstaller
 
                 client.DownloadFileCompleted += (s, args) =>
                 {
-                    // Extraction de l'archive
-                    ZipFile.ExtractToDirectory(destination, "File Download");
+                    if (args.Error != null)
+                    {
+                        MessageBox.Show($"Erreur de téléchargement : {args.Error.Message}", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    if (args.Cancelled)
+                    {
+                        MessageBox.Show("Téléchargement annulé.", "Annulé", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
 
-                    // Affichage du message de fin
-                    label4.Text = "Succesful Download";
-
-                    // Vous pouvez ajouter d'autres actions ici si nécessaire
-
-                    // Optionnel : Supprimer l'archive téléchargée après extraction
-                    //File.Delete(destination);
+                    try
+                    {
+                        ZipFile.ExtractToDirectory(destination, emplacementTelechargement);
+                        label4.Text = "Succesful Download";
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error : {ex.Message}", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 };
 
                 client.DownloadFileAsync(new Uri(UrlDuTelechargement), destination);

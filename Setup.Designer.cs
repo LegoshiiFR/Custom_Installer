@@ -40,45 +40,50 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 13);
+            this.label1.Size = new System.Drawing.Size(90, 14);
             this.label1.TabIndex = 0;
             this.label1.Text = "Custom Installer";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(47, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(314, 13);
+            this.label2.Size = new System.Drawing.Size(334, 14);
             this.label2.TabIndex = 1;
             this.label2.Text = "We do not collect your personal data because it is YOUR privacy";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(47, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(282, 13);
+            this.label3.Size = new System.Drawing.Size(316, 14);
             this.label3.TabIndex = 2;
             this.label3.Text = "Installation is automatic but requires an internal connection";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(47, 129);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(162, 13);
+            this.label4.Size = new System.Drawing.Size(176, 14);
             this.label4.TabIndex = 3;
             this.label4.Text = "Need help? Go to our help page!";
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.Location = new System.Drawing.Point(216, 129);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(63, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(68, 14);
             this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Help Center";
@@ -86,6 +91,7 @@
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(713, 415);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
@@ -96,6 +102,7 @@
             // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(632, 415);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
