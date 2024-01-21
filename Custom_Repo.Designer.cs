@@ -1,4 +1,4 @@
-﻿namespace Custom_Innstaller
+﻿namespace Custom_Installer
 {
     partial class Custom_Repo
     {

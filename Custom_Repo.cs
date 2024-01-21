@@ -2,13 +2,16 @@
 using System.IO;
 using System.IO.Compression;
 using System.Net;
+using System.Reflection.Emit;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace Custom_Innstaller
+namespace Custom_Installer
 {
     public partial class Custom_Repo : Form
     {
-        private const string UrlDuTelechargement = ""; // Remplacez par l'URL réel du téléchargement
+        private const string UrlDuTelechargement = "https://archive.legoshii.fr/money-app/download/MoneyApp-Setup.zip"; // Remplacez par l'URL réel du téléchargement
+
         public Custom_Repo()
         {
             InitializeComponent();
@@ -21,7 +24,7 @@ namespace Custom_Innstaller
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string nomArchive = ""; // Remplace ce nom par celui de ton archive que tu veux télécharger
+            string nomArchive = "MoneyApp-Setup"; // Remplace ce nom par celui de ton archive que tu veux télécharger
             string destination = Path.Combine(textBox1.Text.Trim(), $"{nomArchive}.zip");
             string emplacementTelechargement = textBox1.Text.Trim();
 

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Custom_Innstaller
+namespace Custom_Installer
 {
     public partial class Setup : Form
     {
